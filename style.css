@@ -1,0 +1,143 @@
+:root {
+  --color-default: grey;
+  --color-invalid: grey;
+  --color-valid: green;
+}
+
+html,
+body {
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.left-sidebar {
+  background-image: url("images/leaves.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%;
+}
+
+.banner {
+  background-color: rgba(72, 70, 70, 0.431);
+  margin-top: 5rem;
+  height: fit-content;
+}
+
+.banner p {
+  font-size: 5vw;
+  color: white;
+  font-family: fantasy;
+  margin: 0;
+  text-align: center;
+}
+.content {
+  background-color: rgb(251, 251, 255);
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.message {
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  height: 30%;
+}
+
+.form {
+  width: auto;
+  background-color: white;
+  padding-left: 3rem;
+  box-shadow: 2px 1px 4px #888888;
+  padding: 2rem 0;
+}
+.form-inputs {
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: repeat(auto-fit, minmax(40%, max-content));
+  column-gap: 5rem;
+  row-gap: 2rem;
+  color: #444;
+  padding-left: 3rem;
+}
+
+label,
+input {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.submit {
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.submit-button {
+  background-color: green;
+  color: white;
+  width: fit-content;
+  border-radius: 4px;
+  border: 0px;
+  padding: 0.5rem 0.5rem;
+}
+.submit-button:hover {
+  opacity: 0.8;
+}
+input {
+  border-radius: 8px;
+  border: 2px solid var(--color-default);
+}
+
+input:focus {
+  outline: none;
+}
+
+input:required {
+  outline: none;
+}
+
+input:invalid {
+  border-color: var(--color-invalid);
+}
+
+input:valid {
+  border-color: var(--color-valid);
+}
+
+.error-message {
+  display: none;
+  background-color: #ff9696;
+  color: darkred;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  transition: 2 opacity 2s 3s ease-in;
+  width: fit-content;
+}
+
+.success-message {
+  display: none;
+  background-color: #a6ff96;
+  color: darkgreen;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  transition: 2 opacity 2s 3s ease-in;
+  width: fit-content;
+}
